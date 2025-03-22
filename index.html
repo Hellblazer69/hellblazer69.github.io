@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Form & Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            let tabContents = document.getElementsByClassName("tab-content");
+            for (let content of tabContents) {
+                content.classList.remove("active");
+            }
+
+            // Remove the "active" class from all tab links
+            let tabLinks = document.getElementsByClassName("tab-link");
+            for (let link of tabLinks) {
+                link.classList.remove("active");
+            }
+
+            // Show the current tab and mark the button as active
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+       
+<div class="logo" onclick="openTab(event, 'formTab')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAYXwggN5_F-9G_YfeXJvHOmRhtBK_e0DJjQ&s" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="javascript:void(0);" class="tab-link active" onclick="openTab(event, 'formTab')">Form</a></li>
+            <li><a href="javascript:void(0);" class="tab-link" onclick="openTab(event, 'galleryTab')">Gallery</a></li>
+            <li><a href="javascript:void(0);" class="tab-link" onclick="openTab(event, 'tutorialTab')">Tutorial</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div id="formTab" class="tab-content active">
+            <form>
+                <div class="input-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div class="input-group">
+                    <label for="personal-number">Personal Number:</label>
+                    <input type="text" id="personal-number" name="personal-number" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number:</label>
+                    <div class="phone-input">
+                        <span class="country-code">+995</span>
+                        <input type="text" id="phone" name="phone" maxlength="12" required placeholder="123 45 67 89">
+                    </div>
+                    <small class="error-message" id="phone-error"></small>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">I agree to the <a href="agreement.pdf" target="_blank">terms and conditions</a></label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="galleryTab" class="tab-content">
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZeCLGGIuLwDmzcU3S2W9zAXzKd8ozkMqvDA&s" alt="Description 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ea repellendus magni quam commodi quo qui necessitatibus id, vitae ipsum, beatae quaerat aspernatur consectetur soluta? Molestias voluptatem perferendis cum quibusdam. 1</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6YXve8XJrqF1PcBy7hHO0qtqHX21cBzycg&s" alt="Description 2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nihil porro et eos maiores rem cumque asperiores laudantium, sapiente quas hic ut molestias tempore, perferendis, fugit enim ullam eligendi modi. 2</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE6YXve8XJrqF1PcBy7hHO0qtqHX21cBzycg&s" alt="Description 3">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates cupiditate optio iusto quis tenetur alias, provident praesentium odit, doloribus qui, aliquam doloremque quo? A id, repellat rerum laboriosam pariatur sint. 3</p>
+                </div>
+            </div>
+        </div>
+        <div id="tutorialTab" class="tab-content">
+            <div class="tutorial">
+                <div class="tutorial-item">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TuQjwMBodyk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Footer with Social Icons -->
+<footer class="footer">
+    <div class="social-icons">
+        <a href="https://www.facebook.com/groups/1447092445794148" target="_blank" class="social-icon">
+            <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+        </a>
+        <a href="https://www.instagram.com/boardgamesguild/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+        </a>
+        <a href="https://www.tiktok.com/@board_game_guild" target="_blank" class="social-icon">
+            <i class="fab fa-tiktok"></i> <!-- TikTok Icon -->
+        </a>
+    </div>
+    <p class="footer-text">&copy; 2023 Werewolf in the Dark. All rights reserved.</p>
+</footer>
+
+  <script src="function.js"></script>
+
+</body>
+</html>
