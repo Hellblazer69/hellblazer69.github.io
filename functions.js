@@ -39,3 +39,53 @@ function openTab(evt, tabName) {
         }
     }
 }
+
+const btn = document.getElementById('submitBtn');
+
+    function leaveScratch(x, y) {
+      const scratch = document.createElement('div');
+      scratch.classList.add('scratch-mark');
+      
+      // Randomize the scratch appearance slightly
+      const width = 4 + Math.random() * 4;
+      const height = 40 + Math.random() * 20;
+      const rotation = 10 + Math.random() * 4;
+      const skew = 10 + Math.random() * 4;
+      
+      scratch.style.width = `${width}px`;
+      scratch.style.height = `${height}px`;
+      scratch.style.left = `${x}px`;
+      scratch.style.top = `${y}px`;
+      scratch.style.transform = `rotate(${rotation}deg) skewY(${skew}deg)`;
+      
+      // Randomize animation duration
+      const duration = 1 + Math.random() * 1;
+      scratch.style.animationDuration = `${duration}s`;
+      
+      btn.appendChild(scratch);
+
+      setTimeout(() => {
+        scratch.remove();
+      }, duration * 1000);
+    }
+
+    btn.addEventListener('click', (e) => {
+      const rect = btn.getBoundingClientRect();
+      
+      // Create 3-5 random scratches
+      const scratchCount = 3 + Math.floor(Math.random() * 3);
+      
+      for (let i = 0; i < scratchCount; i++) {
+        // Random positions within button
+        const x = Math.random() * rect.width;
+        const y = Math.random() * rect.height;
+        
+        leaveScratch(x, y);
+      }
+      
+      // Add button press effect
+      btn.style.transform = 'translateY(2px)';
+      setTimeout(() => {
+        btn.style.transform = 'translateY(-2px)';
+      }, 100);
+    });

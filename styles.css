@@ -54,11 +54,11 @@ html, body {
 }
 
 .nav-links a:hover {
-    color: #ff4444; 
+    color: #b22222; 
 }
 
 .nav-links a.active {
-    color: #ff4444; 
+    color: #b22222; 
     font-weight: bold;
 }
 
@@ -97,7 +97,7 @@ html, body {
 }
 
 .input-group input:focus {
-    border-color: #ff4444;
+    border-color: #b22222;
     outline: none;
 }
 
@@ -113,7 +113,7 @@ html, body {
 }
 
 .error-message {
-    color: #ff4444;
+    color: #b22222;
     font-size: 12px;
     margin-top: 5px;
 }
@@ -129,8 +129,8 @@ html, body {
 
 button {
     padding: 10px 20px;
-    background-color: #ff4444;
-    color: white;
+    background-color: #b22222;
+    color: #ddcfcf;
     border: none;
     cursor: pointer;
     border-radius: 4px;
@@ -190,24 +190,24 @@ button:hover {
 }
 
 .social-icon {
-    color: #e0e0e0; 
+    color: #b22222; 
     font-size: 24px;
     transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #ff4444; 
+    color: #b22222; 
 }
 
 .footer-text {
-    color: #e0e0e0;
+    color: #b22222;
     font-size: 14px;
     margin: 0;
 }
 
 h1 {
     text-align: center;
-    color: #ff4444; 
+    color: #b22222; 
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -322,3 +322,226 @@ h1 {
     font-style: italic;
   }
   
+  
+  .checkbox-wrapper-19 {
+    box-sizing: border-box;
+    --background-color: black;
+    --checkbox-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+@-moz-keyframes dothabottomcheck-19 {
+    0% { height: 0; }
+    100% { height: calc(var(--checkbox-height) / 2); }
+}
+
+@-webkit-keyframes dothabottomcheck-19 {
+    0% { height: 0; }
+    100% { height: calc(var(--checkbox-height) / 2); }
+}
+
+@keyframes dothabottomcheck-19 {
+    0% { height: 0; }
+    100% { height: calc(var(--checkbox-height) / 2); }
+}
+
+@keyframes dothatopcheck-19 {
+    0% { height: 0; }
+    50% { height: 0; }
+    100% { height: calc(var(--checkbox-height) * 1.2); }
+}
+
+.checkbox-wrapper-19 input[type=checkbox] {
+    display: none;
+}
+
+.checkbox-wrapper-19 .check-box {
+    height: var(--checkbox-height);
+    width: var(--checkbox-height);
+    background-color: transparent;
+    border: calc(var(--checkbox-height) * .1) solid #b22222;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: border-color ease 0.2s;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-wrapper-19 .check-box::before,
+.checkbox-wrapper-19 .check-box::after {
+    box-sizing: border-box;
+    position: absolute;
+    height: 0;
+    width: calc(var(--checkbox-height) * .2);
+    background-color: #b22222;
+    display: inline-block;
+    transform-origin: left top;
+    border-radius: 5px;
+    content: " ";
+    transition: opacity ease 0.5;
+    opacity: 0; 
+}
+
+.checkbox-wrapper-19 .check-box::before {
+    top: calc(var(--checkbox-height) * .72);
+    left: calc(var(--checkbox-height) * .41);
+    box-shadow: 0 0 0 calc(var(--checkbox-height) * .05) var(--background-color);
+    transform: rotate(-135deg);
+}
+
+.checkbox-wrapper-19 .check-box::after {
+    top: calc(var(--checkbox-height) * .37);
+    left: calc(var(--checkbox-height) * .05);
+    transform: rotate(-45deg);
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box,
+.checkbox-wrapper-19 .check-box.checked {
+    border-color: #b22222;
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::after,
+.checkbox-wrapper-19 .check-box.checked::after {
+    height: calc(var(--checkbox-height) / 2);
+    opacity: 1; /* Added this line to show when checked */
+    animation: dothabottomcheck-19 0.2s ease 0s forwards;
+}
+
+.checkbox-wrapper-19 input[type=checkbox]:checked + .check-box::before,
+.checkbox-wrapper-19 .check-box.checked::before {
+    height: calc(var(--checkbox-height) * 1.2);
+    opacity: 1; /* Added this line to show when checked */
+    animation: dothatopcheck-19 0.4s ease 0s forwards;
+}
+
+.checkbox-wrapper-19 .text-label {
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-wrapper-19 .text-label a {
+    color: #b22222;
+    text-decoration: none;
+}
+
+.checkbox-wrapper-19 .text-label a:hover {
+    text-decoration: underline;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.submit-btn {
+    background-color: #b22222;
+    color: #ddcfcf;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color:#b22222;
+}
+
+
+
+.submit-button {
+    position: relative;
+    padding: 12px 25px;
+    background-color: #b22222;
+    color: #ddcfcf;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .submit-button:hover {
+    background-color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .submit-button:active {
+    transform: translateY(1px);
+    background-color: black;
+  }
+
+  .scratch-mark {
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    background: linear-gradient(to bottom, 
+      rgba(255, 255, 255, 0.8) 0%, 
+      rgba(255, 0, 0, 0.9) 30%, 
+      rgba(139, 0, 0, 0.7) 70%, 
+      transparent 100%);
+    transform: rotate(12deg) skewY(12deg);
+    opacity: 1;
+    pointer-events: none;
+    border-radius: 3px;
+    clip-path: polygon(0 0, 100% 20%, 80% 100%, 0% 80%);
+    animation: bleed 1.5s ease-out forwards;
+    filter: drop-shadow(0 0 2px rgba(255, 0, 0, 0.7));
+  }
+
+  @keyframes bleed {
+    0% {
+      opacity: 1;
+      transform: rotate(12deg) skewY(12deg) scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: rotate(12deg) skewY(12deg) scale(1.05);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(12deg) skewY(12deg) scale(0.95);
+    }
+  }
+
+  .button-container {
+    position: absolute;
+  }
+
+  .button-container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 12px;
+    animation: pulse 3s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.1;
+      transform: scale(1.02);
+    }
+  }
