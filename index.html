@@ -9,60 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    
-    <script>
-
-// Function to open a tab
-function openTab(evt, tabName) {
-    // Hide all tab content
-    let tabContents = document.getElementsByClassName("tab-content");
-    for (let content of tabContents) {
-        content.classList.remove("active");
-    }
-
-    // Remove the "active" class from all tab links
-    let tabLinks = document.getElementsByClassName("tab-link");
-    for (let link of tabLinks) {
-        link.classList.remove("active");
-    }
-
-    // Show the current tab
-    document.getElementById(tabName).classList.add("active");
-
-    // Mark the corresponding tab link as active
-    if (tabName === "formTab") {
-        // Find the "Form" tab link and add the "active" class
-        document.querySelector('.nav-links a[onclick*="formTab"]').classList.add("active");
-    } else {
-        // For other tabs, mark the clicked tab link as active
-        if (evt && evt.currentTarget.classList.contains("tab-link")) {
-            evt.currentTarget.classList.add("active");
-        }
-    }
-
-    // Save the active tab to localStorage
-    localStorage.setItem("activeTab", tabName);
-}
-
-// Function to restore the active tab on page load
-function restoreTab() {
-    // Get the active tab from localStorage
-    let activeTab = localStorage.getItem("activeTab");
-
-    // If an active tab is saved, open it
-    if (activeTab) {
-        openTab(null, activeTab);
-    } else {
-        // Default to the Forms tab if no tab is saved
-        openTab(null, "formTab");
-    }
-}
-
-// Call restoreTab when the page loads
-window.onload = restoreTab;
-
-    </script>
-
+   
 </head>
 
 <body>
@@ -162,10 +109,10 @@ window.onload = restoreTab;
             <i class="fab fa-tiktok"></i> <!-- TikTok Icon -->
         </a>
     </div>
-    <p class="footer-text">&copy; 2023 Werewolf in the Dark. All rights reserved.</p>
+    <p class="footer-text">&copy; <script>document.write(new Date().getFullYear())</script> Board Games Guild. All rights reserved.</p>
 </footer>
 
-  <script src="function.js"></script>
+  <script src="functions.js"></script>
 
 </body>
 </html>
